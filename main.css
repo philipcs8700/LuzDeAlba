@@ -104,41 +104,6 @@ html, body {
   object-fit: cover;  /* sikrer at flaget passer pænt i boksen */
 }
 
-.logo-section {
-  width: 100%;
-  height: 30vh;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  margin-top: 50px;
-}
-
-.logo-track {
-  display: flex;
-  width: max-content;
-  animation: scroll 20s linear infinite;
-}
-
-.logo-track-inner {
-  display: flex;
-}
-
-/* Dupliker automatisk logoerne */
-.logo-track-inner img {
-  width: 450px;
-  margin-right: 2rem;
-}
-
-/* Keyframes for glidende scroll */
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%); /* flyt præcis ét sæt logos væk */
-  }
-}
-
 
 
 .hero-container {
@@ -178,21 +143,16 @@ html, body {
   z-index: 10001; /* ligger OVER panelet */
 }
 
+/* Panelet (skjult til venstre) */
 #newsPanel {
   position: absolute;
   top: 0;
-  left: -100vw;
-  width: 100vw;
-  height: 100vh;
-
-  background-color: #10341e;
-  background-image: url("images/news-panel-bg.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
+  left: -100vw;        /* Skjult helt ude til venstre */
+  width: 100vw;        /* Fuldt viewport-bredde */
+  height: 100vh;       /* Fuldt viewport-højde */
+  background: #10341e;
   overflow: hidden;
-  transition: left 0.5s ease;
+  transition: left 0.5s ease; /* Glider ind */
   z-index: 10000;
 
   display: flex;
@@ -211,7 +171,7 @@ html, body {
 
 .news__eyebrow {
   font-family: "Poppins", sans-serif;
-  font-weight: 500;
+  font-weight: 300;
   text-transform: uppercase;
   color: #10341e;
   font-size: 0.8rem;
@@ -267,7 +227,6 @@ html, body {
 .news-text {
   font-family: "Poppins", Arial, sans-serif;
   font-size: 0.9rem;
-  color: #10341e;
   padding: 2px;
   text-align: center; /* centrerer teksten */
   display: flex;
@@ -400,7 +359,7 @@ body.no-scroll {
   justify-content: center;
   width: 20px;
   height: 20px;
-  border-radius: 10px;
+  border-radius: 8px;
   overflow: hidden;
   margin-right: 3px;
 }
@@ -574,19 +533,18 @@ body.no-scroll {
 }
 
 .image-text__title {
-  font-family: "Knewave", system-ui;
-  font-weight: 400;
-  font-size: 3.5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-size: 3rem;
   line-height: 1.2;
   color: #10341e;
   margin-bottom: 10px;
 }
 
 .image-text__subtitle {
-  width: 95%;
   font-family: "Poppins", sans-serif;
-  font-size: 1.2rem;
-  font-weight: 500;
+  font-size: 1.4rem;
+  font-weight: 300;
   color: #10341e;
   margin-bottom: 10px;
 }
@@ -594,7 +552,6 @@ body.no-scroll {
 .image-text__body {
   font-family: "Poppins", sans-serif;
   font-size: 0.9rem;
-  font-weight: 300;
   color: #10341e;
   line-height: 1.6;
   margin-bottom: 30px;
@@ -670,9 +627,8 @@ body.no-scroll {
 
 
 .centered-text {
-  font-family: "knewave", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 800;
-  line-height: 1.2;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -724,21 +680,19 @@ body.no-scroll {
 }
 
 .image-text__title {
-  font-family: "Knewave", system-ui;
-  font-weight: 400;
-  font-size: 3.5rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 3rem;
   line-height: 1.2;
   color: #10341e;
   margin-bottom: 20px;
   margin-top: 13px;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .image-text__subtitle {
-  width: 100%;
   font-family: "Poppins", sans-serif;
-  font-size: 1.2rem;
-  font-weight: 500;
+  font-size: 1.4rem;
+  font-weight: 300;
   color: #10341e;
   margin-bottom: 10px;
 }
@@ -746,7 +700,6 @@ body.no-scroll {
 .image-text__body {
   font-family: "Poppins", sans-serif;
   font-size: 0.9rem;
-  font-weight: 300;
   color: #10341e;
   line-height: 1.6;
   margin-bottom: 30px;
@@ -927,9 +880,8 @@ body.no-scroll {
 }
 
 .vibes-header h1 {
-  font-family: "Knewave", system-ui;
-  font-weight: 400;
-  font-size: 3.5rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 3rem;
   color: #10341e;
   line-height: 1.4;
   margin: 0; /* kan evt. justeres til margin-top: 0.1rem; hvis nødvendigt */
@@ -981,10 +933,8 @@ body.no-scroll {
 }
 
 .vibes-text h2 {
-  font-family: "Knewave", system-ui;
-  font-weight: 400;
-  font-size: 3.5rem;
-  padding-bottom: 20px;
+  font-family: "Poppins", sans-serif;
+  font-size: 3rem;
   color: #153020;
   line-height: 1.3;
   letter-spacing: 1px;
@@ -1048,19 +998,13 @@ body.no-scroll {
 
 /* Info sektion styling */
 .info-block h3 {
-  font-family: "Knewave", system-ui;
-  font-size: 1.3rem;
-  font-weight: 400;
-  margin-top: 10px;
-  margin-bottom: 5px;
+  margin-top: 20px;
+  font-family: "Poppins", sans-serif;
   color: #10341e;
 }
 
 .info-block p {
-  font-family: "Poppins", sans-serif;
-  font-size: 0.9rem;
-  line-height: 1.4;
-  margin-bottom: 5px;
+  margin-bottom: 3px;
   color: #10341e;
 }
 
@@ -1102,10 +1046,9 @@ body.no-scroll {
     }
 
     h2 {
-      font-family: "Knewave", system-ui;
-      font-weight: 400;
+      font-family: "Poppins", sans-serif;
       margin-bottom: 10px;
-      font-size: 2.2rem;
+      font-size: 28px;
       color: #fffbd9;
     }
 
@@ -1116,15 +1059,13 @@ body.no-scroll {
     }
 
     label {
-      font-family: "Poppins", sans-serif;
-      font-weight: 500;
+      font-weight: bold;
       margin-top: 20px;
       display: block;
       color: #fffbd9;
     }
 
     input, textarea {
-      font-family: "Poppins", sans-serif;
       width: 75%;
       padding: 14px;
       margin-top: 6px;
@@ -1134,7 +1075,6 @@ body.no-scroll {
     }
 
     textarea {
-      font-family: "Poppins", sans-serif;
       height: 150px;
       resize: vertical;
     }
@@ -1174,160 +1114,20 @@ body.no-scroll {
 
 
 
-
-
-
-
-
-
-
-
-
-
-/* Events section */
-.events-section {
-  width: 100%;
-  height: 100vh;
-  background: #fffbd9;
-  padding: 80px 20px;
-}
-
-/* Eyebrow (dato) */
-.event__eyebrow {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  text-transform: uppercase;
-  color: #10341e;
-  font-size: 0.8rem;
-  margin-top: 20px;
-}
-
-/* Indhold */
-.events-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  color: #10341e;
-  font-family: sans-serif;
-}
-
-/* Grid */
-.events-grid {
-  display: flex;
-  gap: 30px;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: stretch;
-}
-
-/* Event card */
-.event-item {
-  padding: 15px;
-  background: #fffbd9;
-  border-radius: 12px;
-  overflow: hidden;
-  width: 30%;
-  min-width: 260px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-  display: flex;
-  flex-direction: column;
-}
-
-/* Billede */
-.event-image {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
-
-/* Tekst */
-.event-text {
-  font-family: "Poppins", Arial, sans-serif;
-  font-size: 0.9rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.event-text h3 {
-  font-size: 1.6rem;
-  margin: 0;
-}
-
-/* Knap */
-.image-text__button {
-  align-self: center;
-  padding: 10px 22px;
-  margin-top: 12px;
-  margin-bottom: 12px;
-  background-color: #333;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 8px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  transition: background-color 0.3s, transform 0.3s;
-}
-
-.image-text__button:hover {
-  background-color: red;
-}
-
-/* Responsive */
-@media (max-width: 1200px) {
-
-  .events-grid {
-    gap: 20px;
-  }
-
-  .event-item {
-    width: 80%;
-  }
-
-  .event-image {
-    display: none;
-  }
-
-  .event-text h3 {
-    font-size: 2rem;
-  }
-
-  .event-text p {
-    font-size: 0.85rem;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .hero-content-center {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
-  color: #fffbd9;
+  color: #000;
 }
 
 .hero-content-center h1 {
-  font-family: "Knewave", system-ui;
-  font-weight: 400;
-  font-size: 16rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 18rem;
+  color: transparent; /* ingen fyldfarve */
+  -webkit-text-stroke: 3px #fffbd9;
   line-height: 1.4;
   margin: 0;
 }
@@ -1410,7 +1210,7 @@ footer {
   height: 210px;
 
   /* brug spansk flag som baggrund */
-  background-image: url("images/flag.png");
+  background-image: url("../images/flag.png");
   background-size: cover;
   background-position: center;
   
@@ -1442,9 +1242,7 @@ footer {
 }
 
 .footer-column h3 {
-  font-family: "Knewave", system-ui;
-  font-weight: 400;
-  font-size: 2rem;
+  font-size: 16px;
   font-weight: bold;
   margin-bottom: 12px;
   color: #fffbd9;
@@ -1461,8 +1259,6 @@ footer {
 }
 
 .footer-column ul li {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
   margin-bottom: 6px;
 }
 
@@ -1557,9 +1353,10 @@ footer {
    @media (max-width: 1600px) {
 
   .hero-content-center h1 {
-  font-family: "Knewave", system-ui;
-  font-weight: 400;
-  font-size: 8rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 4rem;
+  color: transparent; /* ingen fyldfarve */
+  -webkit-text-stroke: 2px #fffbd9;
   line-height: 1.4;
   margin: 0;
 }
@@ -1663,7 +1460,6 @@ footer {
 
   .image-text__title {
     font-size: 18px;
-    font-weight: 500;
   }
 
   .image-text__subtitle {
